@@ -1,8 +1,8 @@
 /*
 Theme Name: Responsive Work SWE
 Theme URI: https://github.com/lamberger
-Description: ResponsiveWork är baserat på 1140 css-grid ( http://cssgrid.net/ ) och Starker HTML-5 ( http://nathanstaines.com/articles/starkers-html5/ )
-Version: 0.1 Januari 2012
+Description: ResponsiveWork är baserat på 1140 css-grid ( http://cssgrid.net/ ), Starker HTML-5 ( http://nathanstaines.com/articles/starkers-html5/ ) och font/text style från TwentyEleven css
+Version: 0.1.0 Januari 2012
 Author: Patrik Lamberger
 Author URI: https://github.com/lamberger
 Tags: html5, Responsive design
@@ -20,11 +20,7 @@ Tags: html5, Responsive design
 
 /************** Headings **************/
 
-h1, h2, h3, h4, h5, h6 {
-	line-height: .8em;
-	margin: .4em 0 .4em 0;
-	color: #444;
-}
+h1, h2, h3, h4, h5, h6 {line-height: .8em; margin: .4em 0 .4em 0; color: #444; clear: both;}
 h1 {font-size: 2.0em;}
 h2 {font-size: 1.6em;}
 h3 {font-size: 1.4em;}
@@ -32,33 +28,108 @@ h4 {font-size: 1.2em;}
 h5 {font-size: 1.1em;}
 h6 {font-size: 1.0em;}
 
-/************** Lists **************/
-ul, ol {
-	margin: 1em 0 1.4em 1.5em;
-	padding: 0;
-	line-height: 140%;
+/***************************************************************************************************************************/
+   body, input, textarea {
+	color: #373737;
+	font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	line-height: 1.625;
 }
-li {
-	margin: 0 0 .5em 0;
-	padding: 0;
+body {background: #f9f9f9;}
+
+hr {background-color: #ccc;	border: 0; height: 1px;	margin-bottom: 1.625em;}
+
+/****************************
+ *       Text styling       *
+ ****************************/
+p {margin-bottom: 1.625em;}
+ul, ol {margin: 0 0 1.625em 2.5em;}
+ul {list-style: square;}
+ol {list-style-type: decimal;}
+ol ol {list-style: upper-alpha;}
+ol ol ol {list-style: lower-roman;}
+ol ol ol ol {list-style: lower-alpha;}
+ul ul, ol ol, ul ol, ol ul {margin-bottom: 0;}
+dl {margin: 0 1.625em;}
+dt {font-weight: bold;}
+dd {margin-bottom: 1.625em;}
+
+strong {font-weight: bold;}
+cite, em, i {font-style: italic;}
+blockquote {font-family: Georgia, "Bitstream Charter", serif; font-style: italic; font-weight: normal; margin: 0 3em;}
+blockquote em, blockquote i, blockquote cite {font-style: normal;}
+blockquote cite {
+	color: #666;
+	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+pre {
+	background: #f4f4f4;
+	-moz-border-radius: 5px; border-radius: 5px; border:1px solid #e9e9e9;
+	font: 13px "Courier 10 Pitch", Courier, monospace;
+	line-height: 1.5;
+	margin-bottom: 1.625em;
+	overflow: auto;
+	padding: 0.75em 1.625em;
+}
+code, kbd {font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;}
+abbr, acronym, dfn {border-bottom: 1px dotted #666;	cursor: help;}
+address {display: block; margin: 0 0 1.625em;}
+ins {background: #fff9c0; text-decoration: none;}
+sup, sub {font-size: 10px; height: 0; line-height: 1; position: relative; vertical-align: baseline;}
+sup {bottom: 1ex;}
+sub {top: .5ex;}
+
+/****************************
+ *       Form styling       *
+ ****************************/
+input[type=text],
+input[type=password],
+textarea {
+	background: #fafafa;
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	border: 1px solid #ddd;
+	color: #888;
+}
+input[type=text]:focus,
+textarea:focus {
+	color: #373737;
+}
+textarea {
+	padding-left: 3px;
+	width: 98%;
+}
+input[type=text] {
+	padding: 3px;
+}
+input#s {
+	background: url(images/search.png) no-repeat 5px 6px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	font-size: 14px;
+	height: 22px;
+	line-height: 1.2em;
+	padding: 4px 10px 4px 28px;
+}
+input#searchsubmit {
+	display: none;
 }
 
-/************** Paragraf **************/
+/****************************
+ *       Link styling       *
+ ****************************/
+a {color: #1982d1; text-decoration: none;}
+a:focus, a:active, a:hover {text-decoration: underline;}
 
-p{ 
-	line-height: 140%;
-	margin: 0 0 1.2em;
-	padding: 0;
-}
-
-
+/********************************************************************************************************************************/
 
 /**********************************
  * ! Layout for desktop version   * 
  **********************************/
-
-	body { font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; } 
-	/* font: .81em/150% Arial, Helvetica, sans-serif; */
 	
 	/********* Mega dropdown *******/
 	#top-div{background:#e3e3e3;}
